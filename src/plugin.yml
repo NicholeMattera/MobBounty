@@ -1,52 +1,57 @@
 name: MobBounty
 main: net.mcbat.MobBounty.MobBounty
-version: 3.02
+version: 4.00
 website: http://mc-bat.net
 author: Steven Mattera
-description: Simple plugin for iConomy that pays/fines players for killing mobs.
+description: Simple plugin that pays and/or fines players for killing mobs.
 commands:
-  mb:
-    description: View rewards and fines.
-    usage: /<command>
-    alias:
-      - mobbounty
-  mbg:
-    description: Modify the general settings.
-    usage: /<command> <property> <value>
-    alias:
-      - mbgeneral
-  mbr:
-    description: Modify the default reward/fine of a mob.
-    usage: /<command> <mob> <amount>
-    alias:
-      - mbreward
-  mbwr:
-    description: Modify reward/fine of a mob in a world.
-    usage: /<command> <world> <mob> <amount>
-    alias:
-      - mbworldreward
-  mbem:
-    description: Modify multiplier per environment.
-    usage: /<command> <normal|nether> <amount>
-    alias:
-      - mbenvmulti
-  mbtm:
-    description: Modify multiplier per time.
-    usage: /<command> <day|sunset|night|sunrise> <amount>
-    alias:
-      - mbtimemulti
-  mbwm:
-    description: Modify multiplier per world.
-    usage: /<command> <world> <amount>
-    alias:
-      - mbworldmulti
-  mbs:
-    description: Save the config files.
-    usage: /<command>
-    alias:
-      - mbsave
-  mbl:
-    description: Load the config files.
-    usage: /<command>
-    alias:
-      - mbload
+    mobbounty:
+        description: View rewards and fines.
+        aliases: [mb]
+        permission: MobBounty.mb
+        usage: /<command>
+    mbgeneral:
+        description: Modify the general settings.
+        aliases: [mbg]
+        permission: MobBounty.Admin.mbg
+        usage: /<command> <property> <value>
+    mbgroupmulti:
+        description: Modify the multipliers per groups.
+        aliases: [mbgm]
+        permission: MobBounty.Admin.mbgm
+        usage: /<command> <world> <group> <amount>
+    mbreward:
+        description: Modify the default reward/fine of a mob.
+        aliases: [mbr]
+        permission: MobBounty.Admin.mbr
+        usage: /<command> <mob> <amount>
+    mbworldreward:
+        description: Modify reward/fine of a mob in a world.
+        aliases: [mbwr]
+        permission: MobBounty.Admin.mbwr
+        usage: /<command> <world> <mob> <amount>
+    mbenvmulti:
+        description: Modify multiplier per environment.
+        aliases: [mbem]
+        permission: MobBounty.Admin.mbem
+        usage: /<command> <normal|nether> <amount>
+    mbtimemulti:
+        description: Modify multiplier per time.
+        aliases: [mbtm]
+        permission: MobBounty.Admin.mbtm
+        usage: /<command> <day|sunset|night|sunrise> <amount>
+    mbworldmulti:
+        description: Modify multiplier per world.
+        aliases: [mbwm]
+        permission: MobBounty.Admin.mbwm
+        usage: /<command> <world> <amount>
+    mbsave:
+        description: Save the config files.
+        aliases: [mbs]
+        permission: MobBounty.Admin.mbs
+        usage: /<command>
+    mbload:
+        description: Load the config files.
+        aliases: [mbl]
+        permission: MobBounty.Admin.mbl
+        usage: /<command>

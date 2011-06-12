@@ -1,10 +1,10 @@
 package net.mcbat.MobBounty.Utils;
 
-public class PlayerKillInfo {
-	public CreatureID lastKill;
+public class MobBountyPlayerKillData {
+	public MobBountyCreature lastKill;
 	public double lastRewardPercentage;
 	
-	public PlayerKillInfo() {
+	public MobBountyPlayerKillData() {
 		lastKill = null;
 		lastRewardPercentage = -1;
 	}
