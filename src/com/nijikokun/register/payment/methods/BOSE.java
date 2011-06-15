@@ -78,6 +78,7 @@ public class BOSE implements Method {
 
         public boolean add(double amount) {
             int IntAmount = (int)Math.ceil(amount);
+            int balance = (int)this.balance();
             return this.BOSEconomy.addPlayerMoney(this.name, IntAmount, false);
         }
 

@@ -22,8 +22,7 @@ public class iCo4 implements Method {
         return "4";
     }
 
-    @SuppressWarnings("static-access")
-	public String format(double amount) {
+    public String format(double amount) {
         return this.iConomy.getBank().format(amount);
     }
 
@@ -35,8 +34,7 @@ public class iCo4 implements Method {
         return false;
     }
 
-    @SuppressWarnings("static-access")
-	public boolean hasAccount(String name) {
+    public boolean hasAccount(String name) {
         return this.iConomy.getBank().hasAccount(name);
     }
 
@@ -44,8 +42,7 @@ public class iCo4 implements Method {
         return false;
     }
 
-    @SuppressWarnings("static-access")
-	public MethodAccount getAccount(String name) {
+    public MethodAccount getAccount(String name) {
         return new iCoAccount(this.iConomy.getBank().getAccount(name));
     }
 

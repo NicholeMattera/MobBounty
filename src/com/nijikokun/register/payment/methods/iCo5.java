@@ -25,8 +25,7 @@ public class iCo5 implements Method {
         return "5";
     }
 
-    @SuppressWarnings("static-access")
-	public String format(double amount) {
+    public String format(double amount) {
         return this.iConomy.format(amount);
     }
 
@@ -34,28 +33,23 @@ public class iCo5 implements Method {
         return Constants.Banking;
     }
 
-    @SuppressWarnings("static-access")
-	public boolean hasBank(String bank) {
+    public boolean hasBank(String bank) {
         return (!hasBanks()) ? false : this.iConomy.Banks.exists(bank);
     }
 
-    @SuppressWarnings("static-access")
-	public boolean hasAccount(String name) {
+    public boolean hasAccount(String name) {
         return this.iConomy.hasAccount(name);
     }
 
-    @SuppressWarnings("static-access")
-	public boolean hasBankAccount(String bank, String name) {
-        return (hasBank(bank)) ? false : this.iConomy.getBank(name).hasAccount(name);
+    public boolean hasBankAccount(String bank, String name) {
+        return (!hasBank(bank)) ? false : this.iConomy.getBank(bank).hasAccount(name);
     }
 
-    @SuppressWarnings("static-access")
-	public MethodAccount getAccount(String name) {
+    public MethodAccount getAccount(String name) {
         return new iCoAccount(this.iConomy.getAccount(name));
     }
 
-    @SuppressWarnings("static-access")
-	public MethodBankAccount getBankAccount(String bank, String name) {
+    public MethodBankAccount getBankAccount(String bank, String name) {
         return new iCoBankAccount(this.iConomy.getBank(bank).getAccount(name));
     }
 	

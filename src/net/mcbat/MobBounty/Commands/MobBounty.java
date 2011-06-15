@@ -47,7 +47,7 @@ public class MobBounty {
 				}
 			}
 
-			if ((_plugin.permissions != null && _plugin.permissions.has(player, "mobbounty.multipliers.group")) || (_plugin.permissions == null)) {
+			if ((_plugin.permissions != null && _plugin.permissions.has(player, "mobbounty.multipliers.group"))) {
 				booleanTest = _plugin.getConfigManager().getProperty(MobBountyConfFile.GENERAL, "useGroupMultiplier");
 				if (booleanTest != null && (booleanTest.equalsIgnoreCase("true") || booleanTest.equalsIgnoreCase("yes") || booleanTest.equalsIgnoreCase("1"))) {
 					String grpTest = _plugin.getConfigManager().getProperty(MobBountyConfFile.MULTIPLIERS, "Groups."+world.getName()+"."+_plugin.permissions.getGroup(world.getName(), player.getName()));
