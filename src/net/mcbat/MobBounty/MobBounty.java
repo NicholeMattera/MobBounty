@@ -8,7 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.nijiko.permissions.PermissionHandler;
-import com.nijikokun.register.payment.Method;
+import net.mcbat.Register.payment.Method;
 
 public class MobBounty extends JavaPlugin {
 	private final Logger _logger = Logger.getLogger("Minecraft");

@@ -11,7 +11,7 @@ import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.PluginManager;
 
 import com.nijikokun.bukkit.Permissions.Permissions;
-import com.nijikokun.register.payment.Methods;
+import net.mcbat.Register.payment.Methods;
 
 public class MobBountyServerListener extends ServerListener {
 	private final MobBounty _plugin;

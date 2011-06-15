@@ -1,4 +1,4 @@
-package com.nijikokun.register.payment;
+package net.mcbat.Register.payment;
 
 import org.bukkit.plugin.Plugin;
 

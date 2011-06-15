@@ -1,6 +1,6 @@
-package com.nijikokun.register.payment.methods;
+package net.mcbat.Register.payment.methods;
 
-import com.nijikokun.register.payment.Method;
+import net.mcbat.Register.payment.Method;
 import cosine.boseconomy.BOSEconomy;
 import org.bukkit.plugin.Plugin;
 
