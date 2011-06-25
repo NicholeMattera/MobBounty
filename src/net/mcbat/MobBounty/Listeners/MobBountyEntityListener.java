@@ -183,8 +183,29 @@ public class MobBountyEntityListener extends EntityListener {
 						
 						reward = (((double) (loc + rand.nextInt(range+1))) / 100) * multiplier;
 					}
-					else
-						reward = Double.valueOf(rewardTest) * multiplier;						
+					else {
+						reward = Double.valueOf(rewardTest) * multiplier;
+
+						booleanTest = _plugin.getConfigManager().getProperty(MobBountyConfFile.GENERAL, "useDepreciativeReturn");
+						if (booleanTest != null && (booleanTest.equalsIgnoreCase("true") || booleanTest.equalsIgnoreCase("yes") || booleanTest.equalsIgnoreCase("1"))) {
+							MobBountyPlayerKillData playerData = _playerData.get(player.getName());
+						
+							if (playerData == null) {
+								playerData = new MobBountyPlayerKillData();
+							}
+							else if (playerData.lastKill == creature) {
+								String returnRate = _plugin.getConfigManager().getProperty(MobBountyConfFile.GENERAL, "depreciativeReturnRate");
+								playerData.lastRewardPercentage -= Double.valueOf(returnRate);
+								reward *= playerData.lastRewardPercentage;
+							}
+							else {
+								playerData.lastRewardPercentage = 1;
+							}
+
+							playerData.lastKill = creature;
+							_playerData.put(player.getName(), playerData);
+						}
+					}
 				}
 				
 				if (_plugin.method != null && _plugin.method.hasAccount(player.getName())) {
@@ -240,5 +261,5 @@ public class MobBountyEntityListener extends EntityListener {
 	    }
 	    
 	    return false;
-	  }
+	}
 }

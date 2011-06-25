@@ -6,6 +6,6 @@ public class MobBountyPlayerKillData {
 	
 	public MobBountyPlayerKillData() {
 		lastKill = null;
-		lastRewardPercentage = -1;
+		lastRewardPercentage = 1;
 	}
 }
