@@ -1,17 +1,15 @@
-#MobBounty
+# MobBounty
 
 A simple plugin for iConomy that pays and fines players for killing mobs.
 
-Features
-----------------------
+## Features
 
 * Individual mob rewards/fines.
 * Multi-world support allowing for different rewards/fine depending on the world.
 * Multiply the rewards/fine depending on the Time, Environment, and/or world.
 * Admin commands to change any setting in game.
 
-Permissions
-----------------------
+## Permissions
 
 * MobBounty.mb -- (Allows for /mb command and collect of rewards and fines.)
 * MobBounty.Admin.mbg -- (Allows for /mbg command.)
@@ -23,8 +21,7 @@ Permissions
 * MobBounty.Admin.mbs -- (Allows for /mbs command.)
 * MobBounty.Admin.mbl -- (Allows for /mbl command.)
 
-Commands
-----------------------
+## Commands
 
 * /mb -- (View rewards and fines.)
 * /mbg -- (Modify the general settings.)
